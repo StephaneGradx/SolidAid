@@ -1,0 +1,113 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header li a:hover {
+    color: #5BA1F3;
+}
+
+#logo a {
+    padding: 10px;
+    margin: 20px 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #D1D522;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#donate {
+    background-color: #5BA1F3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px; 
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .description-overlay {
+    opacity: 1;
+}
+
+.image-description {
+    color: white;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.image-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.image-button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+}
+

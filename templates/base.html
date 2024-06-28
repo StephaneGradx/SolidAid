@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolidAid</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="{% url 'index' %}">SolidAid</a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Accueil</a>
+          </li>
+          <li>
+            <a href="{% url 'register' %}">Nous Rejoindre</a>
+          </li>
+          <li>
+            <a href="{% url 'actions' %}">Nos Actions</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}">Forum</a>
+          </li>
+          <li>
+            <a href="{% url 'checkout' %}" id="donate">Faire un don</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+
+    {% block content %} {% endblock %}
+   
+  </body>
+  
+  <!--AJAX-->
+  <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+</html>

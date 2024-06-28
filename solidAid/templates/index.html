@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+{% if user.is_authenticated %}
+  <p> Bienvenue M. {{user.username}} | <a href="{% url "logout" %}" id="deconnexion">Deconnexion</a></p>
+{% else %}
+  <p> <a href="{% url "connexion" %}" id="connexion">Connexion</a> </p>
+{% endif %}
+
+<h1>Bienvenue sur SolidAid !</h1>
+
+<div class="container">
+  <div class="text-content">
+    <p id="description">
+      SolidAid est une plateforme dédiée à soutenir les associations caritatives
+      dans leurs actions humanitaires. Notre mission est de faciliter la
+      collaboration entre les bénévoles, les donateurs et les associations, afin de
+      créer un impact positif dans le monde.
+    </p>
+    <p id="description">
+      Ensemble, faisons la différence ! Cher(e) ami(e), SolidAid est bien plus
+      qu’une simple plateforme. C’est un espace où chaque geste compte, où chaque
+      euro ou dollar investi se transforme en espoir et en changement. Alors, prêt(e) à faire
+      la différence ? Rejoignez-nous sur SolidAid et laissez votre empreinte dans le
+      cœur de ceux qui ont besoin d’aide. Faites un don aujourd’hui et soyez le
+      changement que vous souhaitez voir dans le monde. Merci pour votre générosité.
+      L’équipe SolidAid
+    </p>
+    <a href="{% url 'checkout' %}"><button class="donate">Faire un don</button></a>
+    <p id="together">
+      Rejoignez la communauté SolidAid ! Ensemble, nous pouvons créer un monde plus
+      solidaire, plus juste et plus humain. Rejoignez-nous dès aujourd’hui sur
+      SolidAid ! Chaque geste compte. Chaque personne compte. Ensemble, nous sommes
+      SolidAid.
+    </p>
+    <a href="{% url 'register' %}"><button class="join">Nous Rejoindre</button></a>
+  </div>
+  <img src="/media/OIP.jpeg" alt="Help us" class="image-content">
+</div>
+
+<h2>AIDEZ CEUX QUI SONT DANS LE BESOIN</h2>
+<p id="action">Nos Récentes Actions</p>
+<div class="image-gallery">
+  {% for action in actions %}
+  <div class="gallery-item">
+      <img src="{{ action.image.url }}" alt="Image">
+      <p class="image-description">{{ action.desc }}</p>
+      <a href="{% url 'actions' %}" class="image-button">En savoir plus</a>
+  </div>
+  {% endfor %}
+</div>
+
+
+</div>
+  
+{% endblock %}

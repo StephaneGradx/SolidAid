@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<h1>RAVI DE VOUS REVOIR ! NOUS SOMMES HEUREUX D'AVOIR VOTRE SOUTIEN QUOTIDIEN</h1>
+{% for message in messages %}
+
+<p>{{message}}</p>
+{% endfor %}
+<form method="post">
+  {% csrf_token %} {{form.as_p}}
+  <br /><input type="submit" value="Se connecter" />
+</form>
+{% endblock %}

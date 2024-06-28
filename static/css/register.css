@@ -1,0 +1,103 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header li a:hover {
+    color: #5BA1F3;
+}
+
+#logo a {
+    padding: 10px;
+    margin: 20px 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #D1D522;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#donate {
+    background-color: #5BA1F3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+p {
+    text-align: center;
+    padding: 5px;
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+    width: 800px;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 20px;
+    border: 4px solid #0000;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+    width: 400px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+textarea {
+    height: 100px;
+    width: 400px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+label{
+    align-items: center;
+    display: grid;
+}
+
+input[type="text"]:focus, input[type="password"]:focus,input[type="email"]:focus, textarea:focus {
+    border: 3px solid #5BA1F3;
+    border-color:  #5BA1F3;
+    outline: none;
+}
+
+input[type="submit"]{
+   margin-left: 330px;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   color: #fff;
+   background-color: #5BA1F3;
+   cursor: pointer;
+
+}

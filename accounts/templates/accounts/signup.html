@@ -1,0 +1,42 @@
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+<header>
+  <div id="logo">
+    <a href="{% url 'index' %}">SolidAid</a>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="{% url 'index' %}">Accueil</a>
+      </li>
+      <li>
+        <a href="{% url 'register' %}">Nous Rejoindre</a>
+      </li>
+      <li>
+        <a href="{% url 'actions' %}">Nos Actions</a>
+      </li>
+      <li>
+        <a href="{% url 'contact' %}">Contact</a>
+      </li>
+      <li>
+        <a href="{% url 'home' %}">Forum</a>
+      </li>
+      <li>
+        <a href="{% url 'checkout' %}" id="donate">Faire un don</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<h1>S'ENGAGER POUR AIDER SON PROCHAIN</h1>
+<p>Devenir <strong> benevole </strong>ou <strong>membre</strong> de SolidAid</p>
+{% for message in messages %}
+
+<p>{{message}}</p>
+{% endfor %}
+<form method="post">
+  {% csrf_token %} {{form.as_p}}
+  <br /><input type="submit" value="Nous Rejoindre" />
+</form>
+{% endblock %}
